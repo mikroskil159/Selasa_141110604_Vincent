@@ -31,9 +31,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.style = new System.Windows.Forms.ComboBox();
+            this.size = new System.Windows.Forms.ComboBox();
+            this.color = new System.Windows.Forms.ComboBox();
             this.RT = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
@@ -70,30 +70,35 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // comboBox1
+            // style
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(213, 36);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(193, 28);
-            this.comboBox1.TabIndex = 3;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.style.FormattingEnabled = true;
+            this.style.Location = new System.Drawing.Point(213, 37);
+            this.style.Name = "style";
+            this.style.Size = new System.Drawing.Size(193, 28);
+            this.style.TabIndex = 3;
+            this.style.Text = "Font";
+            this.style.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // comboBox2
+            // size
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(443, 36);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 28);
-            this.comboBox2.TabIndex = 4;
+            this.size.FormattingEnabled = true;
+            this.size.Location = new System.Drawing.Point(443, 36);
+            this.size.Name = "size";
+            this.size.Size = new System.Drawing.Size(88, 28);
+            this.size.TabIndex = 4;
+            this.size.Text = "2 px";
+            this.size.SelectedIndexChanged += new System.EventHandler(this.size_SelectedIndexChanged_1);
             // 
-            // comboBox3
+            // color
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(600, 36);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 28);
-            this.comboBox3.TabIndex = 5;
+            this.color.FormattingEnabled = true;
+            this.color.Location = new System.Drawing.Point(567, 37);
+            this.color.Name = "color";
+            this.color.Size = new System.Drawing.Size(154, 28);
+            this.color.TabIndex = 5;
+            this.color.Text = "Color";
+            this.color.SelectedIndexChanged += new System.EventHandler(this.color_SelectedIndexChanged_1);
             // 
             // RT
             // 
@@ -110,14 +115,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 416);
             this.Controls.Add(this.RT);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.color);
+            this.Controls.Add(this.size);
+            this.Controls.Add(this.style);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
@@ -127,9 +133,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox style;
+        private System.Windows.Forms.ComboBox size;
+        private System.Windows.Forms.ComboBox color;
         private System.Windows.Forms.RichTextBox RT;
     }
 }
