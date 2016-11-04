@@ -144,7 +144,21 @@ namespace Latihan5_1
         private void RT_TextChanged(object sender, EventArgs e)
         {
             text = true;
+
         }
+
+
+        private void  klikkanan_Mouseup(object sender, MouseEventArgs e)
+        {
+
+        }
+
+
+        private void klikkanan_Click(object sender, EventArgs e)
+        { }
+
+        private void klikkanan_Opening(object sender, CancelEventArgs e)
+        { }
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
@@ -174,6 +188,68 @@ namespace Latihan5_1
         {
             RT.SelectionColor = Color.FromName(color.Text);
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void klikkanan_Opening_1(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void cutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RT.Cut();
+        }
+
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RT.Copy();
+        }
+
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RT.Paste();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RT.SelectedText = "";
+        }
+
+        private void eventLog1_EntryWritten(object sender, System.Diagnostics.EntryWrittenEventArgs e)
+        {
+
+        }
+
+        private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void RT_Mouseup(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                this.klikkanan.Show(this, e.X, e.Y);
+                if (RT.SelectionLength == 0)
+                {
+                    klikkanan.Items[0].Enabled = false;
+                    klikkanan.Items[1].Enabled = false;
+                    klikkanan.Items[3].Enabled = false;
+                }
+                else
+                {
+                    klikkanan.Items[0].Enabled = true;
+                    klikkanan.Items[1].Enabled = true;
+                    klikkanan.Items[3].Enabled = true;
+                }
+            }
+        }
+
+        
     }
     }
 
